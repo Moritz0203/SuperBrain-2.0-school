@@ -41,11 +41,11 @@ namespace SuperBrain_2._0
             RandomNumbers(6);
 
             int count = 10;
-            for (int i = 0; i < randomNumbers.Count(); i++)
+            for (int i = 0; i < randomNumbers.Length; i++)
             {
                 TextBlockCount.Text = Convert.ToString(count--);
 
-                for (int i2 = 0; i2 < randomNumbers[i].Count(); i2++)
+                for (int i2 = 0; i2 < randomNumbers[i].Count; i2++)
                 {
                     Trace.WriteLine(randomNumbers[i][i2].ToString() + "---" + i);
                 }
@@ -88,9 +88,9 @@ namespace SuperBrain_2._0
             ListBox.Visibility= Visibility.Visible;
 
             bool KeinFehler = true;
-            for (int i = 0; i < randomNumbers.Count(); i++)
+            for (int i = 0; i < randomNumbers.Length; i++)
             {
-                for (int i1 = 0; i1 < randomNumbers[i].Count(); i1++)
+                for (int i1 = 0; i1 < randomNumbers[i].Count; i1++)
                 {
                     if (randomNumbers[i][i1] != PlayerNumbers[i][i1])
                     {
@@ -99,24 +99,21 @@ namespace SuperBrain_2._0
                     }
                 }
 
-                if (KeinFehler)
-                {
+                if (KeinFehler) {
                     int temp = i + 1;
                     ListBox.Items.Add("Versuch " + temp + " Win");
                 }
-                else
-                {
+                else {
                     int temp = i + 1;
                     ListBox.Items.Add("Versuch " + temp + " Fehler");
                 }
             }
-
         }
-
+        
         void RandomNumbers(int howmany)
         {
             Random random = new();
-            for(int i = 0; i < randomNumbers.Count(); i++)
+            for(int i = 0; i < randomNumbers.Length; i++)
             {
                 randomNumbers[i] = new List<int>();
                 for (int i1 = 0; i1 < howmany; i1++)
