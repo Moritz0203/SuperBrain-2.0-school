@@ -28,7 +28,7 @@
             <TextBlock Text="Welcom to SuperBrain 2.0" FontSize="30" Foreground="Blue" Name="Welcom" FontWeight="Bold"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Width="505"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Visible" IsEnabled="False" Name="StackPanelTextBoxen" >
+        <StackPanel Grid.Row="1" Grid.Column="1" Width="505"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" IsEnabled="False" Name="StackPanelTextBoxen" >
             <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box1" TextChanged="Box1_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
             <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box2" TextChanged="Box2_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
             <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box3" TextChanged="Box3_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
@@ -59,6 +59,37 @@
                 </TransformGroup>
             </TextBox.RenderTransform>
         </TextBox>
+
+        <ListBox Grid.Column="1"  
+                 Height="315" 
+                 VerticalAlignment="Top" 
+                 Background="{x:Null}" 
+                 Grid.RowSpan="3" 
+                 BorderBrush="blue" 
+                 Grid.ColumnSpan="2" 
+                 Margin="390,72,0,0" 
+                 Name="ListBox" 
+                 FontWeight="Bold" 
+                 FontFamily="Arial Black" 
+                 FontSize="23"
+                 Visibility="Hidden" 
+                 Foreground="Blue"
+                 />
+
+        <TextBlock Grid.Column="2" 
+                   HorizontalAlignment="Left" 
+                   Margin="95,103,0,0" 
+                   Grid.Row="2"
+                   TextWrapping="Wrap"
+                   VerticalAlignment="Top"
+                   Width="42" 
+                   Height="31"
+                   FontSize="30"
+                   Background="Transparent"
+                   FontFamily="Arial Black"
+                   Name="TextBlockCount"
+                   TextAlignment="Right"/>
+
 
     </Grid>
 </Window>

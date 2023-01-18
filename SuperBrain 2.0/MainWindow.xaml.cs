@@ -30,9 +30,9 @@ namespace SuperBrain_2._0
             InitializeComponent();
         }
 
-        List<int>[] randomNumbers = new List<int>[9];
+        List<int>[] randomNumbers = new List<int>[10];
 
-        List<int>[] PlayerNumbers = new List<int>[9];
+        List<int>[] PlayerNumbers = new List<int>[10];
         
         async void Main()
         {
@@ -40,22 +40,16 @@ namespace SuperBrain_2._0
 
             RandomNumbers(6);
 
+            int count = 10;
             for (int i = 0; i < randomNumbers.Count(); i++)
             {
+                TextBlockCount.Text = Convert.ToString(count--);
+
                 for (int i2 = 0; i2 < randomNumbers[i].Count(); i2++)
                 {
                     Trace.WriteLine(randomNumbers[i][i2].ToString() + "---" + i);
                 }
-                Trace.WriteLine(randomNumbers[i].Count());
-                //Trace.WriteLine(randomNumbers[i][0].ToString() + "--1");
-                //Trace.WriteLine(randomNumbers[i][0].ToString() + "--2");
-                //Box1.Clear();
-                //Box2.Clear();
-                //Box3.Clear();
-                //Box4.Clear();
-                //Box5.Clear();
-                //Box6.Clear();
-
+                
                 Box1.Text = randomNumbers[i][0].ToString();
                 Box2.Text = randomNumbers[i][1].ToString();
                 Box3.Text = randomNumbers[i][2].ToString();
@@ -77,7 +71,7 @@ namespace SuperBrain_2._0
                 Box6.Clear();
 
                 Box1.Focus();
-                await Task.Delay(15000);
+                await Task.Delay(2000);
                 
                 PlayerNumbers[i].Add(Convert.ToInt32(Box1.Text));
                 PlayerNumbers[i].Add(Convert.ToInt32(Box2.Text));
@@ -86,17 +80,37 @@ namespace SuperBrain_2._0
                 PlayerNumbers[i].Add(Convert.ToInt32(Box5.Text));
                 PlayerNumbers[i].Add(Convert.ToInt32(Box6.Text));
 
-
-                Trace.WriteLine(PlayerNumbers[i][0] + "----" + "in");
-                Trace.WriteLine(PlayerNumbers[i][1] + "----" + "in");
-                Trace.WriteLine(PlayerNumbers[i][2] + "----" + "in");
-                Trace.WriteLine(PlayerNumbers[i][3] + "----" + "in");
-                Trace.WriteLine(PlayerNumbers[i][4] + "----" + "in");
-                Trace.WriteLine(PlayerNumbers[i][5] + "----" + "in");
-
-
                 StackPanelTextBoxen.IsEnabled = false;
             }
+
+            TextBlockCount.Visibility= Visibility.Hidden;
+            StackPanelTextBoxen.Visibility = Visibility.Hidden;
+            ListBox.Visibility= Visibility.Visible;
+
+            bool KeinFehler = true;
+            for (int i = 0; i < randomNumbers.Count(); i++)
+            {
+                for (int i1 = 0; i1 < randomNumbers[i].Count(); i1++)
+                {
+                    if (randomNumbers[i][i1] != PlayerNumbers[i][i1])
+                    {
+                        KeinFehler = false;
+                        break;
+                    }
+                }
+
+                if (KeinFehler)
+                {
+                    int temp = i + 1;
+                    ListBox.Items.Add("Versuch " + temp + " Win");
+                }
+                else
+                {
+                    int temp = i + 1;
+                    ListBox.Items.Add("Versuch " + temp + " Fehler");
+                }
+            }
+
         }
 
         void RandomNumbers(int howmany)
