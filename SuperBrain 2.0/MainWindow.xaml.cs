@@ -30,9 +30,9 @@ namespace SuperBrain_2._0
             InitializeComponent();
         }
 
-        List<int>[] randomNumbers = new List<int>[10];
+        List<int>[] randomNumbers = new List<int>[2];
 
-        List<int>[] PlayerNumbers = new List<int>[10];
+        List<int>[] PlayerNumbers = new List<int>[2];
         
         async void Main()
         {
@@ -40,7 +40,7 @@ namespace SuperBrain_2._0
 
             RandomNumbers(6);
 
-            int count = 10;
+            int count = 2;
             for (int i = 0; i < randomNumbers.Length; i++)
             {
                 TextBlockCount.Text = Convert.ToString(count--);
@@ -71,7 +71,7 @@ namespace SuperBrain_2._0
                 Box6.Clear();
 
                 Box1.Focus();
-                await Task.Delay(2000);
+                await Task.Delay(5000);
                 
                 PlayerNumbers[i].Add(Convert.ToInt32(Box1.Text));
                 PlayerNumbers[i].Add(Convert.ToInt32(Box2.Text));
@@ -86,28 +86,33 @@ namespace SuperBrain_2._0
             TextBlockCount.Visibility= Visibility.Hidden;
             StackPanelTextBoxen.Visibility = Visibility.Hidden;
             ListBox.Visibility= Visibility.Visible;
+            ListBox1.Visibility= Visibility.Visible;
 
-            bool KeinFehler = true;
+
             for (int i = 0; i < randomNumbers.Length; i++)
             {
+                bool KeinFehler = true;
                 for (int i1 = 0; i1 < randomNumbers[i].Count; i1++)
                 {
                     if (randomNumbers[i][i1] != PlayerNumbers[i][i1])
                     {
-                        KeinFehler = false;
-                        break;
+                        KeinFehler = false;       
                     }
+                    
                 }
+
+                ListBox1.Items.Add(Convert.ToString(randomNumbers[i][0]) + Convert.ToString(randomNumbers[i][1]) + Convert.ToString(randomNumbers[i][2]) + Convert.ToString(randomNumbers[i][3]) + Convert.ToString(randomNumbers[i][4]) + Convert.ToString(randomNumbers[i][5]) + " ---- " + PlayerNumbers[i][0] + PlayerNumbers[i][1] + PlayerNumbers[i][2] + PlayerNumbers[i][3] + PlayerNumbers[i][4] + PlayerNumbers[i][5]);
 
                 if (KeinFehler) {
                     int temp = i + 1;
-                    ListBox.Items.Add("Versuch " + temp + " Win");
+                    ListBox.Items.Add(temp + " Versuch"  + " Win");
                 }
                 else {
                     int temp = i + 1;
-                    ListBox.Items.Add("Versuch " + temp + " Fehler");
+                    ListBox.Items.Add(temp + " Versuch" + " Falsch");
                 }
             }
+
         }
         
         void RandomNumbers(int howmany)

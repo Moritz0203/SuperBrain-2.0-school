@@ -67,13 +67,28 @@
                  Grid.RowSpan="3" 
                  BorderBrush="blue" 
                  Grid.ColumnSpan="2" 
-                 Margin="390,72,0,0" 
+                 Margin="333,72,57,0"
                  Name="ListBox" 
                  FontWeight="Bold" 
                  FontFamily="Arial Black" 
                  FontSize="23"
                  Visibility="Hidden" 
                  Foreground="Blue"
+                 />
+
+        <ListBox  
+                 Height="315" 
+                 VerticalAlignment="Top" 
+                 Background="{x:Null}" 
+                 Grid.RowSpan="3" 
+                 BorderBrush="blue" 
+                 Margin="58,72,333,0" 
+                 Name="ListBox1" 
+                 FontWeight="Bold" 
+                 FontFamily="Arial Black" 
+                 FontSize="23"
+                 Visibility="Hidden" 
+                 Foreground="Blue" Grid.ColumnSpan="2"
                  />
 
         <TextBlock Grid.Column="2" 
