@@ -33,14 +33,23 @@ namespace SuperBrain_2._0
         List<int>[] randomNumbers = new List<int>[2];
 
         List<int>[] PlayerNumbers = new List<int>[2];
-        
+
+        List<TextBox> textBoxes = new List<TextBox>();
+
         async void Main()
         {
             Random random = new();
 
+            textBoxes.Add(Box1);
+            textBoxes.Add(Box2);
+            textBoxes.Add(Box3);
+            textBoxes.Add(Box4);
+            textBoxes.Add(Box5);
+            textBoxes.Add(Box6);
+
             RandomNumbers(6);
 
-            int count = 2;
+            int count = 10;
             for (int i = 0; i < randomNumbers.Length; i++)
             {
                 TextBlockCount.Text = Convert.ToString(count--);
@@ -49,36 +58,30 @@ namespace SuperBrain_2._0
                 {
                     Trace.WriteLine(randomNumbers[i][i2].ToString() + "---" + i);
                 }
-                
-                Box1.Text = randomNumbers[i][0].ToString();
-                Box2.Text = randomNumbers[i][1].ToString();
-                Box3.Text = randomNumbers[i][2].ToString();
-                Box4.Text = randomNumbers[i][3].ToString();
-                Box5.Text = randomNumbers[i][4].ToString();
-                Box6.Text = randomNumbers[i][5].ToString();
 
-                await Task.Delay(random.Next(2000, 9000));
+                for (int i2 = 0; i2 < textBoxes.Count; i2++)
+                {
+                    textBoxes[i2].Text = randomNumbers[i][i2].ToString();
+                }
+
+                await Task.Delay(random.Next(4000, 4500));
 
                 StackPanelTextBoxen.IsEnabled = true;
 
                 PlayerNumbers[i] = new List<int>();
 
-                Box1.Clear();
-                Box2.Clear();
-                Box3.Clear();
-                Box4.Clear();
-                Box5.Clear();
-                Box6.Clear();
+                for (int i2 = 0; i2 < textBoxes.Count; i2++)
+                {
+                    textBoxes[i2].Clear();
+                }
 
                 Box1.Focus();
-                await Task.Delay(5000);
-                
-                PlayerNumbers[i].Add(Convert.ToInt32(Box1.Text));
-                PlayerNumbers[i].Add(Convert.ToInt32(Box2.Text));
-                PlayerNumbers[i].Add(Convert.ToInt32(Box3.Text));
-                PlayerNumbers[i].Add(Convert.ToInt32(Box4.Text));
-                PlayerNumbers[i].Add(Convert.ToInt32(Box5.Text));
-                PlayerNumbers[i].Add(Convert.ToInt32(Box6.Text));
+                await Task.Delay(10000);
+
+                for (int i2 = 0; i2 < textBoxes.Count; i2++)
+                {
+                    PlayerNumbers[i].Add(Convert.ToInt32(textBoxes[i2].Text));
+                }
 
                 StackPanelTextBoxen.IsEnabled = false;
             }
