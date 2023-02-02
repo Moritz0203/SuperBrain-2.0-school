@@ -25,16 +25,16 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Welcom to SuperBrain 2.0" FontSize="30" Foreground="Blue" Name="Welcom" FontWeight="Bold"/>
+            <TextBlock Text="Welcom to SuperBrain 2.0" FontSize="40" Foreground="Black" Name="Welcom" FontWeight="Bold"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Width="505"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" IsEnabled="False" Name="StackPanelTextBoxen" >
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box1" TextChanged="Box1_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box2" TextChanged="Box2_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box3" TextChanged="Box3_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box4" TextChanged="Box4_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box5" TextChanged="Box5_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="2" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box6" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box1" TextChanged="Box1_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box2" TextChanged="Box2_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box3" TextChanged="Box3_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box4" TextChanged="Box4_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box5" TextChanged="Box5_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box6" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -43,9 +43,9 @@
                     Click="Button_Click" 
                     Content="Play" 
                     Background="Transparent"
-                    BorderBrush="Blue" 
-                    BorderThickness="2"
-                    FontSize="20"
+                    BorderBrush="Black" 
+                    BorderThickness="3"
+                    FontSize="30"
                     Name="Button1"/>
         </StackPanel>
 
