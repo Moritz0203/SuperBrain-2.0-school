@@ -144,9 +144,9 @@ namespace SuperBrain_2._0
 
         private void Box1_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Box2.Focus();
-            if (Box1.Text.Length > 1)
+            if (Box1.Text.Length >= 1)
             {
+                Box2.Focus();
                 Box1.Text = Box1.Text.Substring(0, 1);
                 Box1.SelectionStart = 1; 
             }
@@ -154,9 +154,9 @@ namespace SuperBrain_2._0
 
         private void Box2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Box3.Focus();
-            if (Box2.Text.Length > 1)
+            if (Box2.Text.Length >= 1)
             {
+                Box3.Focus();
                 Box2.Text = Box2.Text.Substring(0, 1);
                 Box2.SelectionStart = 1;
             }
@@ -164,9 +164,9 @@ namespace SuperBrain_2._0
 
         private void Box3_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Box4.Focus();
-            if (Box3.Text.Length > 1)
+            if (Box3.Text.Length >= 1)
             {
+                Box4.Focus();
                 Box3.Text = Box3.Text.Substring(0, 1);
                 Box3.SelectionStart = 1;
             }
@@ -174,9 +174,9 @@ namespace SuperBrain_2._0
 
         private void Box4_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Box5.Focus();
-            if (Box4.Text.Length > 1)
+            if (Box4.Text.Length >= 1)
             {
+                Box5.Focus();
                 Box4.Text = Box4.Text.Substring(0, 1);
                 Box4.SelectionStart = 1;
             }
@@ -184,9 +184,9 @@ namespace SuperBrain_2._0
 
         private void Box5_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Box6.Focus();
-            if (Box5.Text.Length > 1)
+            if (Box5.Text.Length >= 1)
             {
+                Box6.Focus();
                 Box5.Text = Box5.Text.Substring(0, 1);
                 Box5.SelectionStart = 1;
             }
@@ -194,12 +194,60 @@ namespace SuperBrain_2._0
 
         private void Box6_TextChanged(object sender, TextChangedEventArgs e)
         {
-            lost.Focus();
             StackPanelTextBoxen.Focus();
-            if (Box6.Text.Length > 1)
+            if (Box6.Text.Length >= 1)
             {
+                lost.Focus();
                 Box6.Text = Box6.Text.Substring(0, 1);
                 Box6.SelectionStart = 1;
+            }
+        }
+
+        private void Box2_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Back)
+            {
+                Box1.Focus();
+            }
+        }
+
+        private void Box3_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                Box2.Focus();
+            }
+        }
+
+        private void Box4_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                Box3.Focus();
+            }
+        }
+
+        private void Box5_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                Box4.Focus();
+            }
+        }
+
+        private void Box6_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Back)
+            {
+                Box5.Focus();
+            }
+        }
+
+        private void lost_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Back)
+            {
+                Box6.Focus();
             }
         }
     }

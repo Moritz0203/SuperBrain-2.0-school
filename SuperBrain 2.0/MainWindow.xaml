@@ -29,12 +29,12 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" Width="505"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" IsEnabled="False" Name="StackPanelTextBoxen" >
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box1" TextChanged="Box1_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box2" TextChanged="Box2_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box3" TextChanged="Box3_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box4" TextChanged="Box4_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box5" TextChanged="Box5_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box6" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box1" TextChanged="Box1_TextChanged" Background="Transparent" FontFamily="Arial Black" />
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box2" TextChanged="Box2_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box2_PreviewKeyDown" />
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box3" TextChanged="Box3_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box3_PreviewKeyDown"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box4" TextChanged="Box4_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box4_PreviewKeyDown"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box5" TextChanged="Box5_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box5_PreviewKeyDown"/>
+            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box6" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box6_PreviewKeyDown"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -49,7 +49,7 @@
                     Name="Button1"/>
         </StackPanel>
 
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="146,142,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1" Height="3" RenderTransformOrigin="0.5,0.5" Name="lost" IsEnabled="True">
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="146,142,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1" Height="3" RenderTransformOrigin="0.5,0.5" Name="lost" IsEnabled="True" PreviewKeyDown="lost_PreviewKeyDown">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
