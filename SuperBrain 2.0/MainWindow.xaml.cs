@@ -75,6 +75,7 @@ namespace SuperBrain_2._0
                     textBoxes[i2].Clear();
                 }
 
+
                 Box1.Focus();
                 await Task.Delay(10000);
 
