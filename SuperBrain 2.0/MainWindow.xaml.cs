@@ -115,7 +115,6 @@ namespace SuperBrain_2._0
                     ListBox.Items.Add(temp + " Versuch" + " Falsch");
                 }
             }
-
         }
         
         void RandomNumbers(int howmany)
