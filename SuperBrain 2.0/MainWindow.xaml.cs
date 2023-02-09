@@ -91,7 +91,6 @@ namespace SuperBrain_2._0
             ListBox.Visibility= Visibility.Visible;
             ListBox1.Visibility= Visibility.Visible;
 
-
             for (int i = 0; i < randomNumbers.Length; i++)
             {
                 bool KeinFehler = true;
