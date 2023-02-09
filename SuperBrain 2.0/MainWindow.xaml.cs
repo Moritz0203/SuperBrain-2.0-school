@@ -76,6 +76,7 @@ namespace SuperBrain_2._0
                 }
 
 
+
                 Box1.Focus();
                 await Task.Delay(10000);
 
