@@ -38,6 +38,28 @@ namespace SuperBrain_2._0
 
         async void Main()
         {
+            int f = 10;
+            if (f == 4)
+            {
+                StackPanelTextBoxen.Width = 194;
+                StackPanelTextBoxen.Margin = new Thickness(403, 0, 0, 0);
+            }
+            else if (f == 6)
+            {
+                StackPanelTextBoxen.Width = 294;
+                StackPanelTextBoxen.Margin = new Thickness(353, 0, 0, 0);
+            }
+            else if (f == 8) 
+            {
+                StackPanelTextBoxen.Width = 394;
+                StackPanelTextBoxen.Margin = new Thickness(303, 0, 0, 0);
+            }
+            else if (f == 10)
+            {
+                StackPanelTextBoxen.Width = 494;
+                StackPanelTextBoxen.Margin = new Thickness(253, 0, 0, 0);
+            }
+
             Random random = new();
 
             textBoxes.Add(Box1);

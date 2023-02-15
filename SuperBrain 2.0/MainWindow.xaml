@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuperBrain_2._0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="1000">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -13,43 +13,28 @@
                 <GradientStop Color="#FF00FFBF" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="140*"/>
-            <ColumnDefinition Width="481*"/>
-            <ColumnDefinition Width="140*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Welcom to SuperBrain 2.0" FontSize="40" Foreground="Black" Name="Welcom" FontWeight="Bold"/>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="53" Width="488" Grid.ColumnSpan="2"/>
+
+        <StackPanel Grid.Row="1" Width="494"  Orientation="Horizontal" Visibility="Visible" IsEnabled="False" Name="StackPanelTextBoxen" Height="60" Margin="253,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box1" TextChanged="Box1_TextChanged" Background="Transparent" FontFamily="Arial Black" />
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box2" TextChanged="Box2_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box2_PreviewKeyDown" />
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box3" TextChanged="Box3_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box3_PreviewKeyDown"/>
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box4" TextChanged="Box4_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box4_PreviewKeyDown"/>
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box5" TextChanged="Box5_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box5_PreviewKeyDown"/>
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box6" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box6_PreviewKeyDown"/>
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box7" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box6_PreviewKeyDown"/>
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box8" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box6_PreviewKeyDown"/>
+            <TextBox Margin="0,0,10,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box9" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box6_PreviewKeyDown"/>
+            <TextBox Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box10" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box6_PreviewKeyDown"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Width="505"  Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden" IsEnabled="False" Name="StackPanelTextBoxen" >
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box1" TextChanged="Box1_TextChanged" Background="Transparent" FontFamily="Arial Black" />
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box2" TextChanged="Box2_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box2_PreviewKeyDown" />
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box3" TextChanged="Box3_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box3_PreviewKeyDown"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box4" TextChanged="Box4_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box4_PreviewKeyDown"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box5" TextChanged="Box5_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box5_PreviewKeyDown"/>
-            <TextBox Margin="38,0,0,0" Width="40" Height="60" BorderThickness="0" BorderBrush="Blue" FontSize="51" TextAlignment="Center" Name="Box6" TextChanged="Box6_TextChanged" Background="Transparent" FontFamily="Arial Black" PreviewKeyDown="Box6_PreviewKeyDown"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Button Width="160" 
-                    Height="50" 
-                    Click="Button_Click" 
-                    Content="Play" 
-                    Background="Transparent"
-                    BorderBrush="Black" 
-                    BorderThickness="3"
-                    FontSize="30"
-                    Name="Button1"/>
-        </StackPanel>
-
-        <TextBox Grid.Column="2" HorizontalAlignment="Left" Margin="146,142,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1" Height="3" RenderTransformOrigin="0.5,0.5" Name="lost" IsEnabled="True" PreviewKeyDown="lost_PreviewKeyDown">
+        <TextBox HorizontalAlignment="Left" Margin="3,192,0,0" Grid.Row="2" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="1" Height="3" RenderTransformOrigin="0.5,0.5" Name="lost" IsEnabled="True" PreviewKeyDown="lost_PreviewKeyDown">
             <TextBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform ScaleY="-1"/>
@@ -60,14 +45,14 @@
             </TextBox.RenderTransform>
         </TextBox>
 
-        <ListBox Grid.Column="1"  
+        <ListBox Grid.Column="2"  
                  Height="315" 
                  VerticalAlignment="Top" 
                  Background="{x:Null}" 
                  Grid.RowSpan="3" 
                  BorderBrush="blue" 
                  Grid.ColumnSpan="2" 
-                 Margin="333,72,57,0"
+                 Margin="261,72,57,0"
                  Name="ListBox" 
                  FontWeight="Bold" 
                  FontFamily="Arial Black" 
@@ -82,18 +67,18 @@
                  Background="{x:Null}" 
                  Grid.RowSpan="3" 
                  BorderBrush="blue" 
-                 Margin="58,72,333,0" 
+                 Margin="3,72,14,0" 
                  Name="ListBox1" 
                  FontWeight="Bold" 
                  FontFamily="Arial Black" 
                  FontSize="23"
                  Visibility="Hidden" 
-                 Foreground="Blue" Grid.ColumnSpan="2"
+                 Foreground="Blue" Grid.Column="1"
                  />
 
-        <TextBlock Grid.Column="2" 
+        <TextBlock 
                    HorizontalAlignment="Left" 
-                   Margin="95,103,0,0" 
+                   Margin="10,151,0,0" 
                    Grid.Row="2"
                    TextWrapping="Wrap"
                    VerticalAlignment="Top"
@@ -104,6 +89,18 @@
                    FontFamily="Arial Black"
                    Name="TextBlockCount"
                    TextAlignment="Right"/>
+
+        <Button     Click="Button_Click" 
+                    Content="Play" 
+                    Background="Transparent"
+                    BorderBrush="Black" 
+                    BorderThickness="3"
+                    FontSize="30"
+                    x:Name="Button1" Margin="396,67,408,66" Grid.Row="2" 
+        />
+
+        <TextBlock Text="Welcom to SuperBrain 2.0" FontSize="40" Foreground="Black" x:Name="Welcom" FontWeight="Bold" Margin="253,82,259,60"/>
+        <Slider HorizontalAlignment="Left" Margin="30,30,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Minimum="1" Maximum="4" Value="1" TickPlacement="BottomRight" LargeChange="1"/>
 
 
     </Grid>
