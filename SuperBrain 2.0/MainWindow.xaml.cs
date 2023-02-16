@@ -135,7 +135,7 @@ namespace SuperBrain_2._0
 
                 if (KeinFehler) {
                     int temp = i + 1;
-                    ListWin.Items.Add(temp + " Versuch"  + " Win");
+                    ListWin.Items.Add(temp + " Versuch" + " Win");
                 }
                 else {
                     int temp = i + 1;
