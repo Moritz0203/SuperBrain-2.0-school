@@ -40,6 +40,7 @@ namespace SuperBrain_2._0
         {
             Check();
 
+
             Random random = new();
 
             int speed = Convert.ToInt32(Convert.ToString(SliderSpeed.Value) + "000");
