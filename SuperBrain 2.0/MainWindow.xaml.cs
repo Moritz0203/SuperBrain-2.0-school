@@ -42,7 +42,6 @@ namespace SuperBrain_2._0
 
             Random random = new();
 
-
             int speed = Convert.ToInt32(Convert.ToString(SliderSpeed.Value) + "000");
            
             int count = 10;
@@ -71,8 +70,6 @@ namespace SuperBrain_2._0
                     textBoxes[i2].Clear();
                 }
 
-
-
                 Box1.Focus();
                 await Task.Delay(speed);
 
@@ -98,7 +95,6 @@ namespace SuperBrain_2._0
                     {
                         KeinFehler = false;       
                     }
-                    
                 }
 
                 if (textBoxes.Count == 4)
@@ -135,7 +131,6 @@ namespace SuperBrain_2._0
                         PlayerNumbers[i][3] + PlayerNumbers[i][4] + PlayerNumbers[i][5] + PlayerNumbers[i][6] + PlayerNumbers[i][7] + PlayerNumbers[i][8] + PlayerNumbers[i][9]);
                     ListWin.Margin = new Thickness(380, 71, 17, 0);
                 }
-                
 
                 if (KeinFehler) {
                     int temp = i + 1;
@@ -230,7 +225,6 @@ namespace SuperBrain_2._0
             SliderSpeed.Visibility = Visibility.Hidden;
             Main();
         }
-
 
 
         private void Box1_TextChanged(object sender, TextChangedEventArgs e)
@@ -446,7 +440,5 @@ namespace SuperBrain_2._0
                 
             }
         }
-
-        
     }
 }
