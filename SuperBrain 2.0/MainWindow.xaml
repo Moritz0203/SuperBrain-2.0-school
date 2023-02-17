@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SuperBrain_2._0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="1000">
+        Title="MainWindow" Height="600" Width="1000" ResizeMode="NoResize">
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF00A7FF" Offset="0"/>
-                <GradientStop Color="#FF00FFBF" Offset="1"/>
+                <GradientStop Color="#FFFF6900" Offset="0"/>
+                <GradientStop Color="#FFFF9800" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
         <Grid.RowDefinitions>
@@ -97,11 +97,11 @@
                     x:Name="Button1" Margin="396,67,408,66" Grid.Row="2" 
         />
 
-        <TextBlock Text="Welcome to SuperBrain 2.0" FontSize="40" Foreground="Black" x:Name="Welcom" FontWeight="Bold" Margin="240,81,240,62"/>
+        <TextBlock Text="Welcome to SuperBrain 2.0" FontSize="40" Foreground="Black" x:Name="Welcom" FontWeight="Bold" Margin="240,81,232,62"/>
         <Slider HorizontalAlignment="Left" Margin="30,30,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Minimum="1" Maximum="4" Value="1" TickPlacement="BottomRight" LargeChange="1" Name="SliderBoxes" IsSnapToTickEnabled="True"/>
-        <Label Content="Schwierigkeit" HorizontalAlignment="Left" Margin="150,24,0,0" Grid.Row="2" VerticalAlignment="Top" Name="Label1"/>
+        <Label Content="Schwierigkeit" HorizontalAlignment="Left" Margin="150,24,0,0" Grid.Row="2" VerticalAlignment="Top" Name="Label1" FontSize="16"/>
         <Slider HorizontalAlignment="Left" Margin="30,67,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" Minimum="4" Maximum="15" Value="1" TickPlacement="BottomRight" LargeChange="1" Name="SliderSpeed" IsSnapToTickEnabled="True"/>
-        <Label Content="Geschwindigkeit (von 4 - 15 sek)" HorizontalAlignment="Left" Margin="150,61,0,0" Grid.Row="2" VerticalAlignment="Top" Name="Label2"/>
+        <Label Content="Geschwindigkeit (von 4 - 15 sek)" HorizontalAlignment="Left" Margin="150,61,0,0" Grid.Row="2" VerticalAlignment="Top" Name="Label2" FontSize="16"/>
 
     </Grid>
 </Window>
