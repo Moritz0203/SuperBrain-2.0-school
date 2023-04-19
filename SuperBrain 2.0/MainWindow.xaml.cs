@@ -30,9 +30,9 @@ namespace SuperBrain_2._0
             InitializeComponent();
         }
 
-        List<int>[] randomNumbers = new List<int>[1];
+        List<int>[] randomNumbers = new List<int>[4];
 
-        List<int>[] PlayerNumbers = new List<int>[1];
+        List<int>[] PlayerNumbers = new List<int>[4];
 
         List<int> Liste = new List<int>();
 
