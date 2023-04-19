@@ -34,6 +34,8 @@ namespace SuperBrain_2._0
 
         List<int>[] PlayerNumbers = new List<int>[1];
 
+        List<int> Liste = new List<int>();
+
         List<TextBox> textBoxes = new List<TextBox>();
 
         async void Main()
@@ -204,7 +206,7 @@ namespace SuperBrain_2._0
         void RandomNumbers(int howmany)
         {
             Random random = new();
-            for(int i = 0; i < randomNumbers.Length; i++)
+            for (int i = 0; i < randomNumbers.Length; i++)
             {
                 randomNumbers[i] = new List<int>();
                 for (int i1 = 0; i1 < howmany; i1++)
@@ -213,7 +215,7 @@ namespace SuperBrain_2._0
                 }
             }
         }
-        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             StackPanelTextBoxen.Visibility = Visibility.Visible;
