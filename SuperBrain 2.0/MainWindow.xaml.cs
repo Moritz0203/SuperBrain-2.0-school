@@ -32,11 +32,11 @@ namespace SuperBrain_2._0
 
         List<int>[] randomNumbers = new List<int>[4];
 
-        List<int>[] PlayerNumbers = new List<int>[4];
+        List<int>[] PlayerNumbers = new List<int>[4]; // liste of liste erstellen 
 
-        List<int> Liste = new List<int>();
+        List<int> Liste = new List<int>(); // normale liste erstellen 
 
-        List<TextBox> textBoxes = new List<TextBox>();
+        List<TextBox> textBoxes = new List<TextBox>(); // liste von textboxen 
 
         async void Main()
         {
@@ -205,13 +205,13 @@ namespace SuperBrain_2._0
 
         void RandomNumbers(int howmany)
         {
-            Random random = new();
+            Random random = new(); // random erstellen 
             for (int i = 0; i < randomNumbers.Length; i++)
             {
                 randomNumbers[i] = new List<int>();
                 for (int i1 = 0; i1 < howmany; i1++)
                 {
-                    randomNumbers[i].Add(random.Next(0, 9));
+                    randomNumbers[i].Add(random.Next(0, 9)); // random bentuzen und in die liste pushen 
                 }
             }
         }
